@@ -25,7 +25,9 @@ and vice versa. Therefore, credit scoring serves as a tool to mitigate the risk 
 institution face when granting a credit to their clients .
 
 2 Methods
+
 2.1 Logistic Regression
+
 The logistic regression method is a supervised Machine Learning algorithm, which can be
 used for regression problems or as a classification method and because it does not require
 2
