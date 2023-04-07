@@ -6,8 +6,8 @@ Implement supervised machine learning techniques in order to further understandi
 
 Introduction
 
-As computers are required to solve problems of higher complexity, tasks arise where traditional programming approaches cannot be used. Such scenarios happen when the designer
-of the system cannot correctly declare a method that uses input data to compute a correct output. Therefore, as stated in (1), an approach in which a computer “attempts to
+As computers are required to solve problems of higher complexity, tasks arise where traditional programming approaches cannot be used. Such scenarios happen when the designer
+of the system cannot correctly declare a method that uses input data to compute a correct output. Therefore, as stated in (1), an approach in which a computer “attempts to
 learn the input/output functionality” is implemented to further understand and classify the
 data. As stated in (5), during the past decades, credit scoring has proved to be ”one of the
 most successful applications of statistical and operations research modeling in finance and
@@ -22,4 +22,20 @@ monthly income, outstanding debt, financial assets, how long the applicant has b
 the same job, whether the applicant has defaulted or was ever delinquent on a previous
 loan, among others.” The higher the score, the lower the risk associated with the applicant
 and vice versa. Therefore, credit scoring serves as a tool to mitigate the risk that financial
-institution face when granting a credit to their clients
+institution face when granting a credit to their clients .
+
+2 Methods
+2.1 Logistic Regression
+The logistic regression method is a supervised Machine Learning algorithm, which can be
+used for regression problems or as a classification method and because it does not require
+2
+too many computational resources, it turns out to be one of the most implemented algorithms nowadays in fields like economy, finance, epidemiology, among others. This allows
+us to estimate the relationship between a group of explanatory variables (Xi, i=1, ..., n) and
+a binary response variable Y in terms of the probability of occurrence of the two possible
+classification groups.
+Actually, this method consists of two parts. Initially it can be understood as a linear
+method if we consider the logit of Y, that is the logarithm of the probabilities that Y is
+equal to one of the two categories
+
+![image](https://user-images.githubusercontent.com/61466844/230623829-b43c6c06-c539-4b1d-8b41-bbe8d9a1be66.png)
+
