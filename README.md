@@ -1,3 +1,4 @@
+[Credit Scoring.pdf](https://github.com/siddup4488/Credit-Scoring-Using-Machine-Learning-Models/files/11179570/Credit.Scoring.pdf)
 # Credit-Scoring-Using-Machine-Learning-Models
 
 Description:
