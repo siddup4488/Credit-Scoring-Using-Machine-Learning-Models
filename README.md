@@ -63,3 +63,152 @@ subject to it. Then, in order to classify the data in the two groups given by th
 dichotomous variable, a cut-o↵ point is established for the values obtained with the logit
 function and those that exceed this value will belong to one group and the others to the
 other, in most of the cases the cuto↵ point is 0.5.
+
+Some of the advantages of this algorithm are:
+1. It is an ecient and easy to implement algorithm because it does not require too
+many computer resources.
+2. It eliminates assumptions made in the linear regression method such as the normality
+of the data under consideration.
+3. It allows better adjustment of the data to be categorized according to a binary response variable.
+However, it also has its disadvantages such as:
+1. It cannot be applied to non-linear problems because it is based on linear regression.
+2. It requires a good pre processing of the data in which those variables that are highly
+correlated with each other must be eliminated.
+
+ Pseudocode
+Algorithm 1 Logistic Regression
+data Load data
+X explanatory variables
+Y response variable
+ypred initialize vector
+pv true
+while pv is true
+for all xi vector in X do
+i) Calculate the regression coecients using the maximum likelihood method.
+end
+ii) Find the maximum p-value
+if maximum p-value > 0.05 then
+iii) Delete variable xi from X
+else pv = false
+end
+end
+iv) Apply the inverse logit function that will give you a probability p for each observation.
+for all p do
+if p >= 0.5 then
+ypred = 1
+else ypred = 0 end end
+
+
+2.2 K-Nearest Neighbor
+KNearest Neighbor is a supervised Machine Learning algorithm which can be used for
+classification problems and as regression predictive problem. This method is very simple,
+nevertheless, its results may be highly accurate. It is a non-parametric method, has a lazy
+learning and it0
+s mostly used for recognition of patterns, data mining, anomaly detection,
+economics, bank systems and calculating credit ratings.
+In Table 1, we compare 3 important aspects scoring them from 1 to 3, being 3 the best
+answer to each aspect. We can observe that KNN is mainly used for its easy interpretation
+and low calculation time. Srivastava 2018
+
+![image](https://user-images.githubusercontent.com/61466844/230625143-6c37f132-93e3-413c-9b70-e2fdc4a93bd0.png)
+
+Given a dataset, the K-NN algorithm consists in selecting a k value and in the moment
+of analysis the k nearest points to the desire class will be the solution. The most important
+phase of the method is the k value selection, it must be selected accordingly with the
+dataset we are working with.
+For better understanding here is an example: lets say we have two classes, C1red
+circles and C2green squares. Now we want to classify the Blblue star as seen in Figure
+
+![image](https://user-images.githubusercontent.com/61466844/230625219-be70389f-186e-49bd-beec-548d4f1082b5.png)
+
+
+Bl can be either from C1 or C2. Let’s say that k = 3, now we take Bl as the centroid
+of a circle big enough that encloses k data points as seen in Figure 2.
+
+![image](https://user-images.githubusercontent.com/61466844/230625283-a21f14fe-c15c-4401-8b07-057667209222.png)
+
+The 3 closest points to Bl are C1, then we can say that it belongs to that class. Nevertheless, when the circle encloses more than one class points, it would classify Bl from the
+class that has more points in the circle. This is the reason why k is preferred to be a odd
+number. Nevertheless, as every algorithm, it has its advantages and disadvantages.
+
+Advantages:
+1. The algorithm is simple and easy to implement.
+2. There’s no need to build a model, tune several parameters, or make additional assumptions.
+3. The algorithm is versatile. It can be used for classification, regression, and search.
+
+Disadvantages:
+1. The algorithm gets significantly slower as the number of examples and/or predictors/independent variables increase
+
+Pseudocode
+Algorithm 2 K-nearest neighbor
+data Load data
+k initialize value
+for all data point do
+i) Calculate distance between the query and the current example from the data.
+ii) Add the distance and the index of the example to an ordered collection.
+iii) Sort the ordered collection of distances and indices in ascending order.
+iv) Pick the first K entries from the sorted collection.
+v) Get the labels of the selected K entries.
+if regression then
+return the mean of the K labels
+else
+return the mode of the K labels.
+end
+
+2.3 Support Vector Machine
+ Support Vector Machines is a discriminative classifier whose classification is based on the construction, in a high or infinite
+dimensional space, of a hyperplane or a set of hyperplanes. By definition, the hyperplane
+is used as a decision boundary in which each input vector from the input space is classified.
+This algorithm can be used for a variety of purposes: classification, regression and outlier
+detection.
+2.3.1 Linear Classification
+a binary classification problem involves
+the use of a classification decision rule to classify elements into two distinct groups. For
+notation purposes let X 2 Rn, denote the input space and Y = {1, 1} denote the output
+domain. Let an example from the data set be represented as the pair (xi, yi), where
+xi = (x1, .., xn) represents the input vector and yi the respective output value. Lastly, let
+the training data be denoted as S = ((x1, y1)), ...,(xl, yl)) 2 (X, Y )
+l and let the testing data
+be denoted as S0 = ((x1, y1), ...,(xk, yk)) 2 (X, Y )
+k
+.
+Given a testing example (xi, yi) 2 S0
+, binary classification is performed by using a
+function f : X 2 Rn ! R, denoted as
+
+![image](https://user-images.githubusercontent.com/61466844/230625937-c3b6cab3-3b7a-4aec-a65f-4c731a50f5a6.png)
+
+2.3.2 Kernel-Induced Feature Spaces
+In some cases, the linear combination of independent variables cannot e↵ectively classify the
+response variable. In this case, the idea of more abstract features of the data is considered.
+According to Cristianini and Shawe-Taylor (2000), by using the kernel representation of the
+data, linear classification learning machines can better classify data on a high dimensional
+feature space.
+The purpose of kernel representation is to change the way data is represented in order to
+obtain an objective function that can fully distinguish di↵erent classes. The preprocessing
+method consist on changing the representation of all xi 2 X i = {1, ..., n}:
+xi = (x1, ..., xn) ! (xi)=(1(xi), ..., d(xi)) d  n. (3)
+The process represented in (3) is equivalent to mapping the input space X into a
+feature space represented by F = {(xi)|xi 2 X} . Let  : X ! F represent a non-linear
+map from the input space to a feature space.
+A reason why feature mapping occurs is due to the need of machines to classify nonlinear relationships. Feature mapping allows non-linearly separable data to become linearly
+separable by rewriting the data into a new representation. According to Cristianini and
+Shawe-Taylor (2000), this process consists on using a linear machine to classify the data
+on the feature space, which was initially applied a non-linear mapping. Given a testing
+example (xi, yi) 2 S0
+, the linear machine used to classify the testing example on feature
+space F is denoted as
+f(xi) = hwT · (xi)i + b, (4)
+where (w, b) 2 Rd ⇤ R are parameters that control the decision rule in the feature space
+and are learned from a S.
+Due to the fact that linear learning machines can also be expressed in dual representation, (4) can be rewritten as the inner product between the input vector from a testing
+example (xi, yi) 2 S0 and the input vector from the training points in S in the feature space
+F:
+f(xi) = X
+l
+j=1
+↵jyj h(xj ) · (xi)i + b. (5)
+According to Cristianini and Shawe-Taylor (2000), for all pairs of examples in the input
+space, a kernel function, K, can be represented as:
+K(x, z) = h(x) · (z)i.
+
