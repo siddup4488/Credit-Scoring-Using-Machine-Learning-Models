@@ -39,5 +39,27 @@ Actually, this method consists of two parts. Initially it can be understood as a
 method if we consider the logit of Y, that is the logarithm of the probabilities that Y is
 equal to one of the two categories
 
-![image](https://user-images.githubusercontent.com/61466844/230623829-b43c6c06-c539-4b1d-8b41-bbe8d9a1be66.png)
+![image](https://user-images.githubusercontent.com/61466844/230624546-6485b799-8a3a-4cf6-8d58-005faffcf38f.png)
 
+
+For which the regression coecients  must be estimated from the maximum likelihood
+method and with the p-values granted by the test, in an iterative way, those variables that
+present the highest of these will be eliminated until only those that have a p-value lower
+than 0.05 are obtained, since in this way the correlation between the explanatory variables
+would be eliminated and a better adjustment of the model would be achieved. Finally,
+we proceed to eliminate the linearity from the inverse of the logistic function and thus be
+able to obtain a behavior in the form of S, where the maximum value will be one and the
+minimum will be zero, because we are calculating the probability of permanence to one of
+the two groups, in which one can be considered as success and the other as failure.
+
+![image](https://user-images.githubusercontent.com/61466844/230624621-b5852a71-1286-4283-acdc-7ad2713254f8.png)
+
+Therefore, it turns out to be a linear model for which the  parameters have to be estimated by implementing the maximum likelihood method. Now, the ratio of the probability
+of success to the probability of failure, known as odds, proves to be very useful, as it allows
+us to understand the relationship between individuals who depend or do not depend on a
+risk factor. In addition, the odds ratio provides the odds ratio (OR), which indicates the
+proportion in which the odds of being subject to a factor exceeds the odds of not being
+subject to it. Then, in order to classify the data in the two groups given by the binary or
+dichotomous variable, a cut-o↵ point is established for the values obtained with the logit
+function and those that exceed this value will belong to one group and the others to the
+other, in most of the cases the cuto↵ point is 0.5.
