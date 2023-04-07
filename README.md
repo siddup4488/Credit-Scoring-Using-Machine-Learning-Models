@@ -187,7 +187,7 @@ As what can be evidenced, the Random Forest Algorithm is that which brigs the be
 results for tackling this specific project related to the acceptance and the rejection from
 a financial institution to a credit applicant. As stated in the literature, factors that may
 influence the decision of an entity to reject or accept a credit application are related to income, expenses, age and housing stratum. This findings are very important since practices
-such as credit scoring allow institutions to su↵er from financial catastrophes and, inclusively, economic catastrophes. We would like to note that algorithms such as the Logistic
+such as credit scoring allow institutions to suffer from financial catastrophes and, inclusively, economic catastrophes. We would like to note that algorithms such as the Logistic
 Regression algorithms such a very decent performance when evaluating the testing class,
 and therefore can also be considered as successful.Lastly, the results obtained from the K
 Nearest Neighbor and the Support Vector Machine algorithms were that which performed
