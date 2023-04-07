@@ -178,37 +178,16 @@ function f : X 2 Rn ! R, denoted as
 
 ![image](https://user-images.githubusercontent.com/61466844/230625937-c3b6cab3-3b7a-4aec-a65f-4c731a50f5a6.png)
 
-2.3.2 Kernel-Induced Feature Spaces
-In some cases, the linear combination of independent variables cannot e↵ectively classify the
-response variable. In this case, the idea of more abstract features of the data is considered.
-According to Cristianini and Shawe-Taylor (2000), by using the kernel representation of the
-data, linear classification learning machines can better classify data on a high dimensional
-feature space.
-The purpose of kernel representation is to change the way data is represented in order to
-obtain an objective function that can fully distinguish di↵erent classes. The preprocessing
-method consist on changing the representation of all xi 2 X i = {1, ..., n}:
-xi = (x1, ..., xn) ! (xi)=(1(xi), ..., d(xi)) d  n. (3)
-The process represented in (3) is equivalent to mapping the input space X into a
-feature space represented by F = {(xi)|xi 2 X} . Let  : X ! F represent a non-linear
-map from the input space to a feature space.
-A reason why feature mapping occurs is due to the need of machines to classify nonlinear relationships. Feature mapping allows non-linearly separable data to become linearly
-separable by rewriting the data into a new representation. According to Cristianini and
-Shawe-Taylor (2000), this process consists on using a linear machine to classify the data
-on the feature space, which was initially applied a non-linear mapping. Given a testing
-example (xi, yi) 2 S0
-, the linear machine used to classify the testing example on feature
-space F is denoted as
-f(xi) = hwT · (xi)i + b, (4)
-where (w, b) 2 Rd ⇤ R are parameters that control the decision rule in the feature space
-and are learned from a S.
-Due to the fact that linear learning machines can also be expressed in dual representation, (4) can be rewritten as the inner product between the input vector from a testing
-example (xi, yi) 2 S0 and the input vector from the training points in S in the feature space
-F:
-f(xi) = X
-l
-j=1
-↵jyj h(xj ) · (xi)i + b. (5)
-According to Cristianini and Shawe-Taylor (2000), for all pairs of examples in the input
-space, a kernel function, K, can be represented as:
-K(x, z) = h(x) · (z)i.
 
+
+Conclusion
+
+As what can be evidenced, the Random Forest Algorithm is that which brigs the best
+results for tackling this specific project related to the acceptance and the rejection from
+a financial institution to a credit applicant. As stated in the literature, factors that may
+influence the decision of an entity to reject or accept a credit application are related to income, expenses, age and housing stratum. This findings are very important since practices
+such as credit scoring allow institutions to su↵er from financial catastrophes and, inclusively, economic catastrophes. We would like to note that algorithms such as the Logistic
+Regression algorithms such a very decent performance when evaluating the testing class,
+and therefore can also be considered as successful.Lastly, the results obtained from the K
+Nearest Neighbor and the Support Vector Machine algorithms were that which performed
+the poorest, so we don’t recommend this for further deployment.
